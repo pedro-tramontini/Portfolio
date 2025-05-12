@@ -1,6 +1,13 @@
+import Footer from "../../components/Footer"
+import Header from "../../components/Header"
+
 function Sobre() {
     return(
-        <h1>Sobre</h1>
+        <>
+            <Header />
+            <h1>Sobre</h1>
+            <Footer />
+        </>
     )
 }
 
