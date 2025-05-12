@@ -1,19 +1,11 @@
-import Container from "../../components/Container"
-import Footer from "../../components/Footer"
-import Header from "../../components/Header"
-import styles from "./Contatos.module.css"
 import { CiMail } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
-import { AiOutlineYoutube } from "react-icons/ai";
 import { VscGithubAlt } from "react-icons/vsc";
 import { FaLinkedinIn } from "react-icons/fa6";
-
+import styles from "./Contatos.module.css"
 
 function Contatos() {
     return(
-        <>
-            <Header />
-            <Container>
                 <section className={styles.contatos}>
                     <h2>Contatos</h2>
                     <div className={styles.informacoes}>
@@ -49,10 +41,6 @@ function Contatos() {
                         </a>
                     </div>
                 </section>
-
-            </Container>
-            <Footer />
-        </>
     )
 }
 
