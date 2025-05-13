@@ -1,7 +1,6 @@
 
 import styles from "./Card.module.css"
 import { BsArrowRight } from "react-icons/bs"
-import { Link } from "react-router-dom"
 import DynamicIcon from "../DynamicIcon"
 
 function Card({name, description, html_url}) {
