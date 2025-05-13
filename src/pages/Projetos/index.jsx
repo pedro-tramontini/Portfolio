@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react"
 import Card from "../../components/Card"
 import styles from "./Projetos.module.css"
+import {getFunction} from "../../services/api"
 
 function Projetos() {
-    
     const [repositories, setRepositories] = useState([])
 
     useEffect(() => {
-        const buscarRepositorios = async () => {
-            const response = await fetch('https://api.github.com/users/pedro-tramontini/repos')
-            const data = await response.json()
-            setRepositories(data)
-        }
-        buscarRepositorios()
-    }, [])
+        getFunction()    
+            .then((data) => setRepositories(data))
+            .catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+            })
+        }, [])
+        
+
+
+
     
     return(
         <section className={styles.projetos}>

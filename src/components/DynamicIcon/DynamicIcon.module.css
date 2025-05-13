@@ -1,0 +1,6 @@
+.card_icones {
+    display: flex;
+    gap: 10px;
+    color: var(--red);
+    font-size: 1.5rem;
+}

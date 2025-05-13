@@ -1,7 +1,8 @@
-import { FaCss3Alt, FaHtml5, FaJs, FaReact } from "react-icons/fa"
+
 import styles from "./Card.module.css"
 import { BsArrowRight } from "react-icons/bs"
 import { Link } from "react-router-dom"
+import DynamicIcon from "../DynamicIcon"
 
 function Card({name, description, html_url}) {
     return(
@@ -10,14 +11,11 @@ function Card({name, description, html_url}) {
             <p>{description}</p>
             <div className={styles.card_footer}>
                 <div className={styles.card_icones}>
-                    <FaHtml5 />
-                    <FaCss3Alt />
-                    <FaJs />
-                    <FaReact />
+                    <DynamicIcon />
                 </div>
-                <Link to={html_url} className={styles.botao}>
+                <a href={html_url} className={styles.botao} target="_blank" rel="nopenner norefferer">
                     <BsArrowRight />
-                </Link>
+                </a>
             </div>
         </section>
     )
